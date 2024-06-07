@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ArticleComponent } from "./article/article.component";
 
@@ -9,10 +9,15 @@ import { ArticleComponent } from "./article/article.component";
     styleUrl: './app.component.css',
     imports: [RouterOutlet, ArticleComponent]
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'angularProject';
-  constructor(){}
-  ngOnInit(): void {
-      console.log('coucou');
+  prix1: number = 80;
+  prix2: number = 100;
+  prix3: number = 120;
+  message: string = "";
+
+  onAffiche(arg:string) {
+    return this.message = "Merci d'avoir voté pour l'article : " + arg;
   }
+
 }
