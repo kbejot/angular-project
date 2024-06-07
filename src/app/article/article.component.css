@@ -1,0 +1,8 @@
+.card-img-top {
+    width: 100%; /* Assurez-vous que l'image couvre la largeur de la carte */
+    height: auto; /* Hauteur auto pour conserver les proportions */
+}
+
+.articleInfo {
+    margin-bottom: 20px; /* Ajoute un espace en dessous de chaque carte */
+}
