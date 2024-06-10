@@ -7,7 +7,10 @@ import { ArticleComponent } from "./article/article.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, ArticleComponent]
+    imports: [
+      RouterOutlet,
+      ArticleComponent
+      ]
 })
 export class AppComponent {
   title = 'angularProject';

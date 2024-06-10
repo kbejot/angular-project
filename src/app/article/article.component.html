@@ -2,7 +2,10 @@
     <div class="card articleInfo">
         <img class="card-img-top" [src]="urlImg" [alt]="textAltImg" style="object-fit: cover; height: 200px;">
         <div class="card-body">
-            <h5 class="card-title">{{ titleArticle }}</h5>
+            <h5 class="card-title">
+                {{ titleArticle }}
+                <span *ngIf="available == false"> - INDISPONIBLE</span>
+            </h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ prixArticle }}€</h6>
             <p class="card-text">Une description</p>
 
