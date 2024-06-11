@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-import { ArticleComponent } from "./article/article.component";
+import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { DataService } from './service/data.service';
+import { ArticleComponent } from '../article/article.component';
+import { DataService } from '../service/data.service';
 
 @Component({
-    selector: 'app-root',
+    selector: 'app-list',
     standalone: true,
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css',
+    templateUrl: './list.component.html',
+    styleUrl: './list.component.css',
     imports: [
       RouterOutlet,
       ArticleComponent,
       CommonModule,
-      RouterLink,
-      RouterLinkActive,
       ]
 })
-export class AppComponent implements OnInit {
+export class ListComponent implements OnInit {
   title = 'angularProject';
   prix1: number = 80;
   prix2: number = 100;
