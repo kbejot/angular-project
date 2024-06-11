@@ -7,7 +7,8 @@
   <div id="home" class="container">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-12 my-3" *ngFor="let article of list">
-        <app-article 
+        <app-article
+          [id] = "article.id"
           [titleArticle]="article.titleArticle" 
           [prixArticle]="article.prixArticle" 
           [available]="article.available"
