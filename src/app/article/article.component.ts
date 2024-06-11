@@ -23,6 +23,7 @@ export class ArticleComponent
   @Input() titleArticle: string = "";
   @Input() prixArticle: number = 0;
   @Input() available: boolean = false;
+  like: boolean = true;
   @Output() info = new EventEmitter<string>();
   
 
@@ -31,8 +32,23 @@ export class ArticleComponent
   }
 
   onLike() {
-    this.totalNbLike += 1;
+    if(this.like) {
+      this.totalNbLike += 1;
+      this.like = false;
+    } else {
+      this.totalNbLike -= 1;
+      this.like = true;
+    }
     this.info.emit(this.titleArticle);
+  }
+
+  getColor(){
+    if(this.available){
+      return "green";
+    }
+    else{
+      return "red";
+    }
   }
 
 }
